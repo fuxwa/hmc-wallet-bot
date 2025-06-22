@@ -14,7 +14,7 @@ A Discord bot for managing HeavenMine (HMC) wallets directly on your server. Sup
 ## Prerequisites
 - Node.js v16+
 - npm
-- Một node backend HeavenMine (API REST, ví dụ: http://localhost:3000)
+- Một node backend HeavenMine
 
 ## Setup
 1. Clone repo:

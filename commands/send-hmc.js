@@ -56,7 +56,7 @@ module.exports = {
             const signature = key.sign(hash, "hex").toDER("hex");
             tx.signature = signature;
 
-            await axios.post("http://localhost:3000/api/transaction", tx);
+            await axios.post(`${process.env.API_BASE_URL}/api/transaction`, tx);
 
             await interaction.reply({ ephemeral: true, content: "✅ Giao dịch đã gửi thành công!" });
         } catch (err) {

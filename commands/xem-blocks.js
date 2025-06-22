@@ -7,7 +7,7 @@ module.exports = {
         .setDescription("Xem toàn bộ blockchain (có phân trang)"),
 
     async execute(interaction) {
-        const res = await axios.get("http://localhost:3000/api/blocks");
+        const res = await axios.get(`${process.env.API_BASE_URL}/api/blocks`);
         const blocks = res.data;
 
         if (!Array.isArray(blocks) || blocks.length === 0) {

@@ -15,7 +15,7 @@ module.exports = {
         const address = interaction.options.getString("address").trim();
 
         try {
-            const res = await axios.get(`http://localhost:3000/api/balance/${address}`);
+            const res = await axios.get(`${process.env.API_BASE_URL}/api/balance/${address}`);
             const { balance, unit } = res.data;
 
             const embed = new EmbedBuilder()

@@ -16,7 +16,7 @@ module.exports = {
         let res;
 
         try {
-            res = await axios.get(`http://localhost:3000/api/txs/${address}`);
+            res = await axios.get(`${process.env.API_BASE_URL}/api/txs/${address}`);
         } catch (err) {
             return interaction.reply({ ephemeral: true, content: "❌ Không thể lấy dữ liệu. Địa chỉ có thể không tồn tại hoặc node bị lỗi." });
         }
